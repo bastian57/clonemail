@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CloneMail</string>
+    <string name="autofill_service_label">CloneMail Autofill</string>
+    <string name="tab_bases">Bases</string>
+    <string name="tab_generator">Generator</string>
+    <string name="tab_bank">Bank</string>
+    <string name="tab_backup">Backup</string>
+    <string name="privacy_note">CloneMail hanya menyarankan alamat email alias. Tidak menyimpan password apa pun. Semua data tersimpan di HP ini saja (offline penuh).</string>
+    <string name="autofill_help">Aktifkan sekali di Pengaturan sistem agar alias CloneMail muncul otomatis saat mengisi kolom email di aplikasi &amp; browser lain:\n\nPengaturan → Sistem → Bahasa &amp; masukan → Layanan isi-otomatis → pilih "CloneMail Autofill".\n\nCatatan: Android membatasi layanan isi-otomatis hanya pada kolom email. "Sign in with Google" tetap memakai akun Gmail dasar Anda, bukan alias.</string>
+</resources>
