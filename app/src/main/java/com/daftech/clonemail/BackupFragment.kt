@@ -1,7 +1,6 @@
 package com.daftech.clonemail
 
 import android.app.Activity
-import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
@@ -86,10 +85,8 @@ class BackupFragment : Fragment() {
 
         binding.btnEnableAutofill.setOnClickListener {
             try {
-                val cn = ComponentName(requireContext(), CloneMailAutofillService::class.java)
                 val intent = Intent(Settings.ACTION_REQUEST_SET_AUTOFILL_SERVICE).apply {
                     data = android.net.Uri.parse("package:com.daftech.clonemail")
-                    putExtra(Settings.EXTRA_AUTOFILL_SERVICE, cn)
                 }
                 startActivity(intent)
             } catch (e: Exception) {

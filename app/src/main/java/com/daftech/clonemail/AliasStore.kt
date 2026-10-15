@@ -104,7 +104,7 @@ class AliasStore(context: Context) {
     }
 
     companion object {
-        val EMAIL_GMAIL = Regex("^[a-zA-Z0-9._%+\\-]+@gmail\\.com\$")
+        val EMAIL_GMAIL = Regex("^[A-Za-z0-9._%+-]+@gmail\\.com$")
 
         /** Sanitize a plus-addressing tag: lowercase alnum only. */
         fun sanitizeTag(raw: String): String =
