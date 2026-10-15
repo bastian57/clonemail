@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_bases" android:title="@string/tab_bases" />
-    <item android:id="@+id/nav_generator" android:title="@string/tab_generator" />
-    <item android:id="@+id/nav_bank" android:title="@string/tab_bank" />
-    <item android:id="@+id/nav_backup" android:title="@string/tab_backup" />
+    <item android:id="@+id/nav_bases" android:title="@string/tab_bases" android:icon="@drawable/ic_nav_bases" />
+    <item android:id="@+id/nav_generator" android:title="@string/tab_generator" android:icon="@drawable/ic_nav_generator" />
+    <item android:id="@+id/nav_bank" android:title="@string/tab_bank" android:icon="@drawable/ic_nav_bank" />
+    <item android:id="@+id/nav_backup" android:title="@string/tab_backup" android:icon="@drawable/ic_nav_backup" />
 </menu>

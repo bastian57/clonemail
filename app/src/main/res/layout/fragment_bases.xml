@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email Dasar Gmail"
-        android:textColor="@color/cm_text"
+        android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Ketik alamat Gmail asli Anda di sini. Bukan password."
-        android:textColor="@color/cm_text_secondary"
+        android:textColor="@color/text_secondary"
         android:textSize="13sp" />
 
     <LinearLayout
@@ -35,10 +35,10 @@
             android:layout_weight="1"
             android:hint="contoh@gmail.com"
             android:inputType="textEmailAddress"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnAddBase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -11,4 +11,13 @@
     <color name="cm_hint">#8A9BA8</color>
     <color name="cm_danger">#E5484D</color>
     <color name="cm_ok">#3FB950</color>
+    <!-- Cyberpunk neon-noir palette (v1.2.0) -->
+    <color name="cyber_bg">#05070F</color>
+    <color name="cyber_surface">#0D1424</color>
+    <color name="neon_cyan">#00F0FF</color>
+    <color name="neon_magenta">#FF2E9A</color>
+    <color name="neon_purple">#7B2FFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9FB3C8</color>
+    <color name="nav_inactive">#6B7A8F</color>
 </resources>

@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Generator Alias"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Email dasar"
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <Spinner
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Nama situs"
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <EditText
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="tokopedia"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="URL situs (opsional)"
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <EditText
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:hint="https://…"
             android:inputType="textUri"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
         <TextView
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Pola alias"
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <RadioGroup
@@ -78,13 +78,13 @@
             android:layout_height="wrap_content">
 
             <RadioButton android:id="@+id/rbSite" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="nama situs" android:textColor="@color/cm_text" android:checked="true" />
+                android:text="nama situs" android:textColor="@color/text_primary" android:checked="true" />
             <RadioButton android:id="@+id/rbRandom" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="situs + 4 huruf acak" android:textColor="@color/cm_text" />
+                android:text="situs + 4 huruf acak" android:textColor="@color/text_primary" />
             <RadioButton android:id="@+id/rbDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="situs + tanggal (yyyymmdd)" android:textColor="@color/cm_text" />
+                android:text="situs + tanggal (yyyymmdd)" android:textColor="@color/text_primary" />
             <RadioButton android:id="@+id/rbCustom" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="tag custom" android:textColor="@color/cm_text" />
+                android:text="tag custom" android:textColor="@color/text_primary" />
         </RadioGroup>
 
         <EditText
@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="tag custom"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
         <TextView
@@ -100,14 +100,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Catatan (opsional)"
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <EditText
             android:id="@+id/etNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
         <TextView
@@ -116,19 +116,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:padding="12dp"
-            android:background="@color/cm_card"
+            android:background="@drawable/card_neon"
             android:text="Pratinjau alias…"
-            android:textColor="@color/cm_accent"
+            android:textColor="@color/neon_cyan"
             android:textSize="15sp" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnGenerate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Pratinjau" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

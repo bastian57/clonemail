@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bank Alias"
-        android:textColor="@color/cm_text"
+        android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="Cari situs / alias…"
-        android:textColor="@color/cm_text"
+        android:textColor="@color/text_primary"
         android:textColorHint="@color/cm_hint" />
 
     <LinearLayout
@@ -53,6 +53,6 @@
         android:id="@+id/tvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/cm_text_secondary"
+        android:textColor="@color/text_secondary"
         android:textSize="12sp" />
 </LinearLayout>

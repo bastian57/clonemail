@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Aktivasi CloneMail"
-            android:textColor="@color/cm_text_primary"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="1 device = 1 lisensi. Kirim Device ID ke penjual, lalu masukkan kode aktivasi di bawah."
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
         <LinearLayout
@@ -33,7 +33,7 @@
             android:layout_marginTop="16dp"
             android:orientation="vertical"
             android:padding="14dp"
-            android:background="@color/cm_card"
+            android:background="@drawable/card_neon"
             android:clickable="true"
             android:focusable="true">
 
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Device ID (tap untuk salin)"
-                android:textColor="@color/cm_text_secondary"
+                android:textColor="@color/text_secondary"
                 android:textSize="12sp" />
 
             <TextView
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/cm_accent"
+                android:textColor="@color/neon_cyan"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textIsSelectable="true" />
@@ -62,7 +62,7 @@
             android:layout_marginTop="16dp"
             android:hint="Kode aktivasi (CM1-…)"
             android:inputType="text"
-            android:textColor="@color/cm_text_primary"
+            android:textColor="@color/text_primary"
             android:textColorHint="@color/cm_hint" />
 
         <TextView
@@ -75,7 +75,7 @@
             android:textStyle="bold"
             android:visibility="gone" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnActivate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Tanpa kode valid, aplikasi tidak bisa dipakai."
-            android:textColor="@color/cm_text_secondary"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp" />
 
         <TextView

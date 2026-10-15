@@ -5,17 +5,17 @@
     android:orientation="horizontal"
     android:padding="12dp"
     android:layout_marginBottom="8dp"
-    android:background="@color/cm_card">
+    android:background="@drawable/card_neon">
 
     <TextView
         android:id="@+id/tvBaseEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@color/cm_text"
+        android:textColor="@color/text_primary"
         android:textSize="15sp" />
 
-    <Button
+    <Button android:background="@drawable/btn_neon_outline" android:textColor="@color/neon_cyan"
         android:id="@+id/btnDeleteBase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

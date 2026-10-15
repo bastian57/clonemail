@@ -75,8 +75,8 @@ jobs:
           if [ -z "$KEY_ALIAS_PASSWORD" ] && [ -z "$KEY_PASSWORD" ]; then echo "ERROR: secret KEY_ALIAS_PASSWORD (atau KEY_PASSWORD) KOSONG"; exit 1; fi
           gradle assembleRelease 2>&1 | tee build.log
           ls -lh app/build/outputs/apk/release/
-          cp app/build/outputs/apk/release/app-release.apk CloneMail-v1.1.0.apk
-          ls -lh CloneMail-v1.1.0.apk build.log
+          cp app/build/outputs/apk/release/app-release.apk CloneMail-v1.2.0.apk
+          ls -lh CloneMail-v1.2.0.apk build.log
 
       - name: Upload build.log artifact (selalu, walau build merah)
         if: always()
@@ -91,7 +91,7 @@ jobs:
         run: |
           set -e
           gh release view latest > /dev/null 2>&1 || gh release create latest --title "latest" --notes "Rolling latest build - CloneMail"
-          gh release upload latest CloneMail-v1.1.0.apk --clobber
+          gh release upload latest CloneMail-v1.2.0.apk --clobber
           gh release view build-log > /dev/null 2>&1 || gh release create build-log --title "build-log" --notes "Build logs - CloneMail"
           gh release upload build-log build.log --clobber
           echo "UPLOAD OK"

@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Backup &amp; Autofill"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -23,25 +23,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Backup"
-            android:textColor="@color/cm_accent"
+            android:textColor="@color/neon_magenta"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnExportJson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Export JSON ke Download" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnExportCsv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Export CSV ke Download" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnImport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Autofill Otomatis (v2)"
-            android:textColor="@color/cm_accent"
+            android:textColor="@color/neon_magenta"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -62,10 +62,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/autofill_help"
-            android:textColor="@color/cm_text"
+            android:textColor="@color/text_primary"
             android:textSize="13sp" />
 
-        <Button
+        <Button android:background="@drawable/btn_neon_primary" android:textColor="@color/cyber_bg" android:textStyle="bold"
             android:id="@+id/btnEnableAutofill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.CloneMail" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/cm_primary</item>
-        <item name="colorPrimaryDark">@color/cm_primary_dark</item>
-        <item name="colorAccent">@color/cm_accent</item>
-        <item name="android:windowBackground">@color/cm_bg</item>
+        <item name="colorPrimary">@color/neon_cyan</item>
+        <item name="colorPrimaryDark">@color/cyber_bg</item>
+        <item name="colorAccent">@color/neon_magenta</item>
+        <item name="android:windowBackground">@color/cyber_bg</item>
     </style>
 </resources>

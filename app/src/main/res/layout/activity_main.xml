@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cm_bg">
+    android:background="@color/cyber_bg">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
@@ -16,8 +16,9 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cm_card"
+        android:background="@color/cyber_surface"
         app:menu="@menu/bottom_nav"
-        app:itemIconTint="@color/cm_accent"
-        app:itemTextColor="@color/cm_text" />
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color" />
 </LinearLayout>
