@@ -52,8 +52,8 @@ class BankFragment : Fragment() {
         binding.rvBank.layoutManager = LinearLayoutManager(requireContext())
         binding.rvBank.adapter = adapter
 
-        val statusAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, statuses)
-        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val statusAdapter = ArrayAdapter(requireContext(), R.layout.spinner_item, statuses)
+        statusAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spFilterStatus.adapter = statusAdapter
 
         binding.etSearch.addTextChangedListener(object : TextWatcher {
@@ -75,8 +75,8 @@ class BankFragment : Fragment() {
         all.clear()
         all.addAll(store.aliases().sortedByDescending { it.createdAt })
         val bases = listOf("Semua") + store.bases()
-        val baseAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, bases)
-        baseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val baseAdapter = ArrayAdapter(requireContext(), R.layout.spinner_item, bases)
+        baseAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spFilterBase.adapter = baseAdapter
         applyFilter()
     }

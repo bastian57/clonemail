@@ -53,6 +53,6 @@
         android:id="@+id/tvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/cm_hint"
+        android:textColor="@color/cm_text_secondary"
         android:textSize="12sp" />
 </LinearLayout>

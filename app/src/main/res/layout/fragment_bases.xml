@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Ketik alamat Gmail asli Anda di sini. Bukan password."
-        android:textColor="@color/cm_hint"
+        android:textColor="@color/cm_text_secondary"
         android:textSize="13sp" />
 
     <LinearLayout

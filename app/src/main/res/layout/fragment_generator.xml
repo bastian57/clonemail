@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Email dasar"
-            android:textColor="@color/cm_hint"
+            android:textColor="@color/cm_text_secondary"
             android:textSize="13sp" />
 
         <Spinner
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Nama situs"
-            android:textColor="@color/cm_hint"
+            android:textColor="@color/cm_text_secondary"
             android:textSize="13sp" />
 
         <EditText
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="URL situs (opsional)"
-            android:textColor="@color/cm_hint"
+            android:textColor="@color/cm_text_secondary"
             android:textSize="13sp" />
 
         <EditText
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Pola alias"
-            android:textColor="@color/cm_hint"
+            android:textColor="@color/cm_text_secondary"
             android:textSize="13sp" />
 
         <RadioGroup
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Catatan (opsional)"
-            android:textColor="@color/cm_hint"
+            android:textColor="@color/cm_text_secondary"
             android:textSize="13sp" />
 
         <EditText

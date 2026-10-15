@@ -87,8 +87,8 @@ class GeneratorFragment : Fragment() {
 
     private fun refreshBaseSpinner() {
         val bases = store.bases()
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, bases.ifEmpty { listOf("— tambah base dulu —") })
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, bases.ifEmpty { listOf("— tambah base dulu —") })
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spBase.adapter = adapter
     }
 

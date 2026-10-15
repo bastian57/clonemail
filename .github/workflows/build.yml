@@ -47,14 +47,36 @@ jobs:
           echo "/tmp/gradle-8.7/bin" >> "$GITHUB_PATH"
           /tmp/gradle-8.7/bin/gradle --version | head -n 5
 
-      - name: Build debug APK (log ke build.log)
+      - name: Decode keystore (release signing)
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          set -e
+          if [ -z "$KEYSTORE_BASE64" ]; then echo "ERROR: secret KEYSTORE_BASE64 KOSONG - isi dulu di repo Settings > Secrets and variables > Actions (4 secrets: KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_ALIAS_PASSWORD)"; exit 1; fi
+          CLEAN=$(printf '%s' "$KEYSTORE_BASE64" | tr -d '\n\r\t ')
+          echo "KEYSTORE_BASE64 panjang setelah dibersihkan: ${#CLEAN} karakter"
+          printf '%s' "$CLEAN" | grep -q '[^A-Za-z0-9+/=]' && { echo "ERROR: KEYSTORE_BASE64 mengandung karakter bukan-base64 - harus murni base64 keystore"; exit 1; } || true
+          printf '%s' "$CLEAN" | base64 -d > "$GITHUB_WORKSPACE/release.keystore"
+          ls -lh "$GITHUB_WORKSPACE/release.keystore"
+          file "$GITHUB_WORKSPACE/release.keystore" || true
+
+      - name: Build release APK (log ke build.log)
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/release.keystore
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_ALIAS_PASSWORD: ${{ secrets.KEY_ALIAS_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           set -e
           set -o pipefail
-          gradle assembleDebug 2>&1 | tee build.log
-          ls -lh app/build/outputs/apk/debug/
-          cp app/build/outputs/apk/debug/app-debug.apk CloneMail-v1.0.0.apk
-          ls -lh CloneMail-v1.0.0.apk build.log
+          if [ -z "$KEYSTORE_PASSWORD" ]; then echo "ERROR: secret KEYSTORE_PASSWORD KOSONG"; exit 1; fi
+          if [ -z "$KEY_ALIAS" ]; then echo "ERROR: secret KEY_ALIAS KOSONG"; exit 1; fi
+          if [ -z "$KEY_ALIAS_PASSWORD" ] && [ -z "$KEY_PASSWORD" ]; then echo "ERROR: secret KEY_ALIAS_PASSWORD (atau KEY_PASSWORD) KOSONG"; exit 1; fi
+          gradle assembleRelease 2>&1 | tee build.log
+          ls -lh app/build/outputs/apk/release/
+          cp app/build/outputs/apk/release/app-release.apk CloneMail-v1.1.0.apk
+          ls -lh CloneMail-v1.1.0.apk build.log
 
       - name: Upload build.log artifact (selalu, walau build merah)
         if: always()
@@ -69,7 +91,7 @@ jobs:
         run: |
           set -e
           gh release view latest > /dev/null 2>&1 || gh release create latest --title "latest" --notes "Rolling latest build - CloneMail"
-          gh release upload latest CloneMail-v1.0.0.apk --clobber
+          gh release upload latest CloneMail-v1.1.0.apk --clobber
           gh release view build-log > /dev/null 2>&1 || gh release create build-log --title "build-log" --notes "Build logs - CloneMail"
           gh release upload build-log build.log --clobber
           echo "UPLOAD OK"

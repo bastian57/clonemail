@@ -18,6 +18,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ActivationActivity"
+            android:exported="false"
+            android:label="Aktivasi CloneMail" />
+
         <service
             android:name=".CloneMailAutofillService"
             android:label="@string/autofill_service_label"
